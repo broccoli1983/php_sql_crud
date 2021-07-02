@@ -20,10 +20,18 @@
   width: 100%;
   }
 
-h1{
-    color:white;
-  }
-
+  .relative {
+    position: relative;
+    width: 100%;
+}
+.absolute {
+    position: absolute;
+    bottom: 80px;
+    margin-left: 460px;
+}
+.account{
+  margin-left: 400px;
+}
 nav ul{
 display: table;
 margin: 0 auto;
@@ -39,6 +47,7 @@ nav a{
 display: block;
 width: 100%;
 text-decoration: none;
+font-size: 25px;
 color: #555;
 padding-bottom: 5px;
 }
@@ -52,7 +61,9 @@ border-bottom: 3px solid green;
 
 .about{
   text-align: center;
+  padding-top: 100px;
 }
 .infog{
   text-align: center;
+  padding-top: 50px;
 }

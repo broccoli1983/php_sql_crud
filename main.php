@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- style.cssファイルの読み込み -->
+    <!-- main.cssファイルの読み込み -->
     <link rel="stylesheet" href="css/main.css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -37,26 +37,27 @@
             </ul>
         </nav>
     </div>
-    <div class="background">
-        <img src="img/logo.jpeg" alt="main">
-        <h1>8COLOGY</h1>
-        <a href="user_input.php" class="btn">LOGIN</a>
-        <a href="todo_input.php" class="account">新規アカウント登録はこちら</a>
-    </div>
+    <figure class="relative">
+        <div class="background">
+            <img src="img/mainlogo.gif" alt="main">
+            <div class="login">
+                <figcaption class="absolute"><button class="btn btn-success btn-block"><a href="user_input.php" class="btn"><span style="color: white;">LOGIN</span></a></button></figcaption>
+            </div>
+            <a href="todo_input.php" class="account">新規アカウント登録はこちら</a>
+        </div>
+    </figure>
     <div class="about">
         <section id="section_about">
             <h3 class=”text_title”><span style="color: green;">ABOUT</span></h3>
             <div class=”text_subtitle_about”>8COLOGYについて</div>
             <div class="text_title_details_about">
                 <dl>
-                    <dt>8COLOGYは、廃棄プラスチック削減を推進するサービスです。</dt>
-                    <!-- <dd>パスタやグラタン、ケーキやサンドイッチ。</dd>
-                    <dd>私たちの食卓にはいつもチーズがあった、あの頃の当たり前をこの手で取り戻したい。</dd> -->
+                    <dt>8COLOGYは、廃プラスチック削減を推進するサービスです。</dt>
                     <dd>世の中のもったいないをなくしたい。</dd>
-                    <dd>ごみのでない世界を作りたい。</dd>
+                    <dd>ごみが少ない世界を作りたい。</dd>
                     <dd>大きな時代の変化の中で、廃プラスチックの再生資源化を推進していきたい。</dd>
                     <dd>そんな思いから、「8COLOGY」は歩みを始めています。</dd>
-                    <dd>廃棄プラスチックの再生資源化はもちろんのこと、</dd>
+                    <dd>廃プラスチックの再生資源化はもちろんのこと、</dd>
                     <dd>エコ活動を推進するためのサービスを提供していきます。</dd>
                 </dl>
             </div>
@@ -65,11 +66,25 @@
     <div class="infog">
         <section id="section_infog">
             <h3 class=”text_title”><span style="color: green;">INFOGRAPHICS</span></h3>
-            <p>数字でみる8COLOGY</p>
-            <h3 class=”text_title”>累計<span style="color: green;">87654321</span>kg</h3>
-            <!-- <div>累計<span class="count"">87654321</span>kg</div> -->
+            <p>数字でみる8COLOGYの活動</p>
+            <p>これまでに回収したプラスチック容器の重さは…</p>
+            <h3><span style="color: green;" class="count">12345</span>kg</h3>
         </section>
     </div>
-</body>
+    <!-- 数字のカウントアップjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.count').each(function() {
+            $(this).prop('c', 0).animate({
+                c: $(this).text()
+            }, {
+                duration: 3000,
+                easing: 'linear',
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    </script>
 
 </html>

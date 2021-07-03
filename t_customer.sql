@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2021 年 7 月 01 日 16:42
+-- 生成日時: 2021 年 7 月 03 日 07:00
 -- サーバのバージョン： 10.4.19-MariaDB
 -- PHP のバージョン: 8.0.7
 
@@ -50,7 +50,10 @@ CREATE TABLE `t_customer` (
 
 INSERT INTO `t_customer` (`id`, `last_name`, `first_name`, `rubi_last_name`, `rubi_first_name`, `email`, `birthday`, `sex`, `tel`, `job`, `zip`, `address`, `created_at`, `updated_at`) VALUES
 (2, 'aaa', 'bbb', 'aaa', 'bbb', 'test@test', 19000101, '女性', 921111111, '会社員', 8100000, '福岡市中央区大手門', '2021-06-30 21:12:51', '2021-06-30 21:12:51'),
-(3, 'aaa', 'bbb', 'aaa', 'bbb', 'test@test', 19000101, '男性', 921111111, '自営業', 8100000, '福岡市中央区大手門', '2021-06-30 22:19:27', '2021-06-30 22:19:27');
+(3, 'aaa', 'bbb', 'aaa', 'bbb', 'test@test', 19000101, '男性', 921111111, '自営業', 8100000, '福岡市中央区大手門', '2021-06-30 22:19:27', '2021-06-30 22:19:27'),
+(4, 'aaa', 'bbb', 'aaa', 'bbb', 'test@test', 19000101, '女性', 921111111, '公務員', 1234567, '福岡市中央区大手門', '2021-07-03 02:30:27', '2021-07-03 02:30:27'),
+(5, 'aaa', 'bbb', 'aaa', 'bbb', 'test@test', 19000101, '女性', 921111111, '公務員', 1234567, '福岡市中央区大手門', '2021-07-03 02:54:13', '2021-07-03 02:54:13'),
+(6, 'aaa', 'bbb', 'aaa', 'bbb', 'broccolibroccolibroccoli@gmail.com', 19000101, '女性', 921111111, '公務員', 1234567, '福岡市中央区大手門', '2021-07-03 13:16:02', '2021-07-03 13:16:02');
 
 --
 -- ダンプしたテーブルのインデックス
@@ -70,7 +73,7 @@ ALTER TABLE `t_customer`
 -- テーブルの AUTO_INCREMENT `t_customer`
 --
 ALTER TABLE `t_customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
